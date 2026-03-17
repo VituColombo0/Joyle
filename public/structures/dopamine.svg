@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Benzene ring -->
+  <path d="M20 15 L35 10 L50 15 L50 35 L35 40 L20 35 Z" />
+  <!-- Double bonds -->
+  <path d="M23 18 L32 13" stroke-opacity="0.5" />
+  <path d="M38 12 L47 17" stroke-opacity="0.5" />
+  <path d="M48 25 L48 32" stroke-opacity="0.5" />
+  <path d="M32 38 L23 33" stroke-opacity="0.5" />
+  <!-- Two hydroxyl groups on benzene (catechol) -->
+  <line x1="20" y1="15" x2="12" y2="10" />
+  <text x="3" y="8" font-size="7" fill="currentColor" stroke="none">OH</text>
+  <line x1="50" y1="15" x2="58" y2="10" />
+  <text x="61" y="8" font-size="7" fill="currentColor" stroke="none">OH</text>
+  <!-- Ethylamine chain -->
+  <line x1="35" y1="40" x2="35" y2="50" />
+  <line x1="35" y1="50" x2="50" y2="65" />
+  <line x1="50" y1="65" x2="50" y2="75" />
+  <!-- Amino group -->
+  <text x="53" y="78" font-size="7" fill="currentColor" stroke="none">NH₂</text>
+</svg>

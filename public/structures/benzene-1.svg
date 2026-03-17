@@ -1,0 +1,18 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Benzene Ring - Hexagon -->
+  <g stroke="currentColor" stroke-width="2" fill="none">
+    <!-- Hexagon outline -->
+    <path d="M60 15 L105 37.5 L105 82.5 L60 105 L15 82.5 L15 37.5 Z" stroke-opacity="0.6"/>
+    <!-- Inner circle for delocalized electrons -->
+    <circle cx="60" cy="60" r="25" stroke-opacity="0.4"/>
+  </g>
+  <!-- Carbon atoms at vertices -->
+  <g fill="currentColor" fill-opacity="0.8">
+    <circle cx="60" cy="15" r="4"/>
+    <circle cx="105" cy="37.5" r="4"/>
+    <circle cx="105" cy="82.5" r="4"/>
+    <circle cx="60" cy="105" r="4"/>
+    <circle cx="15" cy="82.5" r="4"/>
+    <circle cx="15" cy="37.5" r="4"/>
+  </g>
+</svg>

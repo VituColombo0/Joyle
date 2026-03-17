@@ -1,0 +1,45 @@
+import re
+
+css_path = r'c:\Users\Vitu\Desktop\Loyce\src\css\hero.css'
+with open(css_path, 'r', encoding='utf-8') as f:
+    css = f.read()
+
+# Define the new blocks for the image background
+new_bg_css = """/* --- Static Image Background --- */
+.hero__bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('../../public/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35; /* Overlay blend down */
+    mix-blend-mode: screen; /* Enhance the bright greens */
+    filter: contrast(1.1) brightness(0.9);
+}
+
+/* Base overlay to ensure text readability against the complex image */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 15, 20, 0.4) 0%, var(--color-bg) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+"""
+
+# Regex to remove EVERYTHING from /* --- Chemical Structure Backgrounds --- */ up to /* Mobile adjustments */
+patternRegex = r'/\* --- Chemical Structure Backgrounds --- \*/.*?/\* Mobile adjustments \*/'
+# Append mobile adjustments comment back so the rest of the file stays intact
+replacement = new_bg_css + "\n/* Mobile adjustments */"
+
+new_css = re.sub(patternRegex, replacement, css, flags=re.DOTALL)
+
+with open(css_path, 'w', encoding='utf-8') as f:
+    f.write(new_css)
+
+print("hero.css updated successfully with static background image.")
